@@ -1,5 +1,6 @@
 package com.ms.brmtrading.azurehdtradeentry;
 
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ import javax.ws.rs.core.MediaType;
 @RequestMapping("trade")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
+@Api(value = "", description = "Trade Entry Controller")
 public class TradeEntryController {
 
     @GetMapping("/status")
@@ -25,6 +27,7 @@ public class TradeEntryController {
     }
 
     @PostMapping("/create")
+
     public String createTrade(Trade trade) {
         log.info("Creating new trade");
         return null;

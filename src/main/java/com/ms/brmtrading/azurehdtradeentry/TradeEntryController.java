@@ -1,12 +1,11 @@
 package com.ms.brmtrading.azurehdtradeentry;
 
 import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
@@ -27,8 +26,7 @@ public class TradeEntryController {
     }
 
     @PostMapping("/create")
-
-    public String createTrade(Trade trade) {
+    public String createTrade(@RequestBody() Trade trade) {
         log.info("Creating new trade");
         return null;
     }

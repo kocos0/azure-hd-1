@@ -1,2 +1,5 @@
-# azure-hd-1
- Azure Hack Day 1
+
+
+
+##Development
+After starting the application go to http://localhost:12345/swagger-ui.html
